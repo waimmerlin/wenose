@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="tabs.js"></script>
+<meta charset="UTF-8">
+<head>
+  <title>О нас - сайт в стиле ChatGPT</title>
+</head>
+<body>
+<a href="https://vk.com/wenoseclient" target="_blank"><button class="bn"><h3>О нас</h3></button></a>
+<div class="container">
+  <div class="block">
+    <p class="plp">
+    <h1>Про наши обходы</h1>
+    <div class="block-content">Наш чит обходит все популярные античиты такие как<br><b>(matrix,aac,vulcan)</b></div>
+    <div class="block-column"><b>Наш бесплатный софт самый лучший и безопасный на рынке</b></div>
+  </div>
+  <div class="block">
+    <p class="plp">
+    <h1>Про наш чит</h1>
+    <div class="block-content">Чит выйдет через 1-2 месяца, а также софт будет абсолютно бесплатный так как по нашему мнению брать деньги за только вышедший чит это <b>позорно</b></div>
+    <div class="block-column"><b>Owner-rimiz#0377</b></div>
+  </div>
+  <div class="block">
+    <p class="plp">
+    <h1>Настройки</h1>
+    <div class="block-content">Очень удобная настройка чита которая осуществляется всего в пару кликов.<br> <b>Главное меньше воды и больше толку!</b></div>
+    <div class="block-column"><h3>Удобное и просто меню<br>настроек</h3></div>
+  </div>
+</div>
+<div class="siteab">
+  <h1>Про сам сайт</h1>
+  <div class="block-content-site">Этот сайт для расказа про чит в дальнейшем если мы все таки сделаем чит платным этот сайт<br>будет использован для того что бы можно было купить клиент. <br>Также в скором времени сайт будет оптимизирован для телефонов<br> <b>Главное что бы людям нравилось!</b></div>
+  <div class="block-content-sitecr"><h5>сайт сделал waim#0732 в 2023 г., это только первая версия сайта и я буду его улучшать</h5></div>
+</div>
+<script>
+
+  const blocks = document.querySelectorAll('.block');
+  const delay = 200; // задержка в миллисекундах
+
+  blocks.forEach(block => {
+    const content = block.innerHTML;
+    block.innerHTML = `
+    <div class="block-content">${content}</div>
+    <div class="block-column"></div>
+  `;
+
+    const contentWrapper = block.querySelector('.block-content');
+    const column = block.querySelector('.block-column');
+
+    let isOpen = false;
+    let timeoutId;
+
+    block.addEventListener('click', () => {
+      if (isOpen) {
+        clearTimeout(timeoutId);
+        column.style.opacity = '0';
+        setTimeout(() => {
+          column.style.display = 'none';
+        }, delay);
+        isOpen = false;
+      } else {
+        column.style.display = 'block';
+        setTimeout(() => {
+          column.style.opacity = '1';
+        }, 0);
+        isOpen = true;
+      }
+    });
+  });
+</script>
+</body>
+</html>
