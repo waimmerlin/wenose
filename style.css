@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@1,200&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
 * {
-  -webkit-user-select: none; /* запрещаем выделение текста для веб-кит браузеров */
-  -moz-user-select: none; /* запрещаем выделение текста для Mozilla Firefox */
-  -ms-user-select: none; /* запрещаем выделение текста для IE/Edge */
-  user-select: none; /* запрещаем выделение текста для всех остальных браузеров */
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
 }
 
 body {
@@ -69,7 +69,7 @@ body {
 .block:hover {
   background-position: 0% 0%;
   animation: rainbow 5s ease-in-out infinite;
-  animation-delay: 0.1s; /* добавляем задержку в 1 секунду */
+  animation-delay: 0.1s; 
 }
 
 
@@ -77,7 +77,7 @@ body {
 @keyframes rainbow {
   0% {
     background-position: 0% 0%;
-    box-shadow: 0px 0px 20px #000; /* убираем тени из начального состояния */
+    box-shadow: 0px 0px 20px #000; 
   }
   50% {
     background-position: 100% 0%;
