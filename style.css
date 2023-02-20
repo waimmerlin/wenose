@@ -1,14 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@1,200&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
 * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-select: none; /* запрещаем выделение текста для веб-кит браузеров */
+  -moz-user-select: none; /* запрещаем выделение текста для Mozilla Firefox */
+  -ms-user-select: none; /* запрещаем выделение текста для IE/Edge */
+  user-select: none; /* запрещаем выделение текста для всех остальных браузеров */
 }
+
+/*footer*/
+footer{
+  background-color: #333;
+  color: #ffffff;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+/*header*/
+header{
+  right:30%;
+  background-color: rgba(0, 0, 0, 0.65);
+
+  padding: 20px;
+}
+/*header-text*/
+.yee{
+  display: flex;
+}
+
+.box {
+  width: 35px;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: #862020;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+
+.box:before {
+  color: #ffffff;
+  content: "C";
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to bottom, #0099ff 0%, #cc99ff 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  color: #ffffff;
+  content: 'L';
+}
+
+.box:nth-child(3)::before {
+  color: #ffffff;
+  content: 'I';
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  color: #ffffff;
+  content: 'E';
+}
+.box:nth-child(5)::before {
+  transform: translateY(-100%);
+  color: #ffffff;
+  content: 'N';
+}
+.box:nth-child(6)::before {
+  transform: translateY(-100%);
+  color: #ffffff;
+  content: 'T';
+}
+.yee:hover .box:before {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body {
   background: url('https://cdn.discordapp.com/attachments/1033109352090976338/1076897669848502394/imgonline-com-ua-Blur-debbjipcqHvEW_1.jpg') no-repeat;
   background-size: cover;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -69,7 +173,7 @@ body {
 .block:hover {
   background-position: 0% 0%;
   animation: rainbow 5s ease-in-out infinite;
-  animation-delay: 0.1s; 
+  animation-delay: 0.1s; /* добавляем задержку в 1 секунду */
 }
 
 
@@ -77,7 +181,7 @@ body {
 @keyframes rainbow {
   0% {
     background-position: 0% 0%;
-    box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 20px #000; /* убираем тени из начального состояния */
   }
   50% {
     background-position: 100% 0%;
@@ -263,66 +367,4 @@ button:active {
 .bn:active {
   color: #000;
   font-weight: bold;
-}
-
-
-.siteab {
-  --color: #00A97F;
-  --color2: rgb(10, 25, 30);
-  padding: 0.8em 1.75em;
-  background-color: transparent;
-  border-radius: 6px;
-  border: .3px solid var(--color);
-  transition: .5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 300;
-  font-size: 17px;
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
-  text-transform: uppercase;
-  color: var(--color);
-}
-
-.siteab::after, .siteab::before {
-  content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  transition: .5s ease-out;
-  background-color: var(--color);
-}
-
-.siteab::before {
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.siteab:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.siteab:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
-
-.siteab:hover {
-  color: var(--color2);
-}
-
-.siteab:active {
-  filter: brightness(.7);
-  transform: scale(.98);
-}
-.block-content-sitecr{
-  text-align: left;
-  margin-left: 10px;
-  border:10px
 }
